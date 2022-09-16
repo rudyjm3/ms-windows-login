@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: rgb(231, 231, 231);
+  --Main-Font-Color: rgb(231, 231, 231);
+  --Black-Transparent-BG: rgba(51, 51, 51, 0.6);
+  --Light-Grey: #b9c1c2;
+  --Light-Grey-Hover: rgba(185, 193, 194, 0.6);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a3158;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden !important;
+  height: 100vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.082);
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
+}
+main .top-left-link,
+main .top-right-link {
+  position: absolute;
+  cursor: pointer;
+}
+main .center-link,
+main .bottom-left,
+main .bottom-right {
+  position: absolute;
+}
+main .top-left-link__icon,
+main .top-right-link__icon,
+main .center-link__icon {
+  background-color: var(--Black-Transparent-BG);
+  border-radius: 50%;
+  padding: 4px 7px;
+  line-height: 1.5;
+}
+main .top-left-link__icon i,
+main .top-right-link__icon i,
+main .center-link__icon i {
+  transform: rotateY(180deg);
+}
+main .top-left-link {
+  top: 40px;
+  left: 40px;
+  width: 250px;
+}
+main .top-left-link__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+}
+main .top-left-link__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+main .top-left-link__top-content {
+  line-height: 1.2;
+  padding: 5px 7px 0px 7px;
+  transition: background-color 0.3s ease-in-out;
+}
+main .top-left-link__sub-content {
+  width: 100%;
+  line-height: 1.2;
+  padding: 0px 7px 10px 7px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.3s ease-in-out;
+}
+main .top-right-link__question:hover + .top-right-link__description {
+  opacity: 1;
+}
+main .top-right-link__description:hover {
+  opacity: 1;
+}
+main .top-right-link {
+  top: 40px;
+  right: 70px;
+  width: 250px;
+}
+main .top-right-link__content {
+  position: relative;
+  z-index: 5;
+}
+main .top-right-link__description {
+  position: relative;
+  top: -22px;
+  left: 30px;
+  width: 250px;
+  height: auto;
+  background-color: rgba(51, 51, 51, 0.6);
+  padding: 25px 15px 25px 15px;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+}
+main .top-right-link__description p {
+  margin-bottom: 8px;
+}
+main .top-right-link__description hr {
+  border-style: none;
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: var(--Light-Grey);
+  margin-bottom: 15px;
+}
+main .top-right-link__heading-container {
+  color: var(--Main-Font-Color);
+  padding: 10px;
+}
+main .top-right-link__title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+main .top-right-link__attribute {
+  font-size: 10px;
+  color: var(--Light-Grey);
+}
+main .top-right-link__like .like--heart-icon {
+  margin-right: 10px;
+}
+main .top-right-link .like--text {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: var(--Light-Grey);
+}
+main .top-right-link .dislike--heart-icon {
+  margin-right: 5px;
+}
+main .top-right-link .dislike--text {
+  margin-left: 20px;
+  color: var(--Light-Grey);
+}
+main .center-link {
+  top: 50%;
+  margin: auto 0;
+}
+main .bottom-left {
+  bottom: 40px;
+  left: 40px;
+}
+main .bottom-right {
+  bottom: 40px;
+  right: 40px;
+}
+main .bottom-left__time {
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+main .bottom-left__date {
+  font-size: 1.5rem;
+}
+main .bottom-right {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+main .bottom-right__wifi-icon, main .bottom-right__power-icon {
+  margin-left: 25px;
+}
+main .bottom-right__wifi-icon i {
+  transform: rotate(315deg);
+}
+
+.login-form-container {
+  padding: 25px;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 2px;
+  display: none;
+}/*# sourceMappingURL=style.css.map */

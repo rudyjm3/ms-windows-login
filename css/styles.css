@@ -17,7 +17,8 @@ a {
    text-decoration: none;
    color: rgb(231, 231, 231);
 }
-.wrapper{
+.container{
+   position: relative;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -27,17 +28,45 @@ a {
    padding: 25px;
    color: rgb(231, 231, 231);
 }
-
-.top-left-link{
+.top-left-link,
+.top-right-link,
+.bottom-left-link,
+.bottom-right-link {
    position: absolute;
-   top: 40px;
+   cursor: pointer;
+   z-index: 10;
+}
+.top-left-link{
+   top: 50px;
    left: 40px;
 }
 .top-right-link{
-   position: absolute;
-   top: 40px;
-   right: 40px;
+   top: 50px;
+   right: 100px;
 }
+.top-right-link:hover + 
+.top-right-link__description {
+   opacity: 1;
+}
+.top-right-link__description{
+   /* position: absolute; */
+   top: 95px;
+   right: 15px;
+   width: 230px;
+   height: auto;
+   background-color: rgba(51, 51, 51, 0.6);
+   padding: 30px 15px 15px 15px;
+   opacity: 0;
+   z-index: 1;
+   transition: all 0.5s ease-in-out;
+}
+
+.top-right-link__description > p{
+   margin-bottom: 15px;
+}
+/* .top-right-link > a:hover + .top-right-link__description {
+   display: block;
+} */
 .center-link{
    position: absolute;
    top: 45%;
@@ -45,7 +74,7 @@ a {
 }
 .bottom-left{
    position:absolute;
-   bottom: 40px;
+   bottom: 100px;
    left: 40px;
 }
 .bottom-right{
@@ -53,7 +82,7 @@ a {
    bottom: 40px;
    right: 40px;
 }
-.top-left-icon,.top-right-icon,.center-icon{
+.top-left-link__icon,.top-right-link__icon,.center-link__icon{
    background-color: rgba(51, 51, 51, 0.6);
    border-radius: 50%;
    padding: 4px 8px;
@@ -97,6 +126,9 @@ a {
    font-size: 45px;
    font-weight: 300;
 }
-.bottom-right i {
+.bottom-right .wifi-icon,.power-icon {
    margin-left: 25px;
+}
+.wifi-icon > i {
+   transform: rotate(315deg);
 }

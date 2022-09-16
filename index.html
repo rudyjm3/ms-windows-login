@@ -5,54 +5,90 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <meta name="description" content="Windows 10 Login Recreation">
+  <meta name="author" content="Rudy">
 
   <title>Windows Login Recreation</title>
+  
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- online link to font awesome 5 below 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> -->
+  <!-- online link to font awesome 5 below  -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Local fontawesome 5.15.3 -->
   <link rel="stylesheet" href="css/all.css">
+  <!-- Online Fontawesome 6.2.0 cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
 </head>
 
 <body>
 
-  <div class="wrapper container-center">
+  <main class="container">
      <div class="top-left-link">
-        <a href="http://"><span class="top-left-icon"><i class="fas fa-search"></i></span>Link top left</a>
-     </div>
-     <div class="top-right-link">
-         <a href="http://"><span class="top-right-icon"><i class="fas fa-camera"></i></span>Link top right</a>
-     </div>
-     <div class="center-link">
-         <a href="http://"><span class="center-icon"><i class="fas fa-search"></i></span>Center Icon</a>
-     </div>
-
-     <div class="login-form-container">
-         <form action="" id="login-form">
-            <div class="user">
-               <img id="user-img" src="img/profile-placeholder.png" alt="user profile image">
-            <h3 class="user-name">User Name</h3>
-            </div>
- 
-            <input type="password" name="password-input" id="">
-         </form>
+      <div class="top-left-link__wrapper">
+         <div class="top-left-link__icon"><i class="fas fa-search"></i></div>
+         <div class="top-left-link__content-wrapper">
+            <p class="top-left-link__top-content">Link top left Link top left   Link top left Link top left 
+            </p>
+            <p class="top-left-link__sub-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+         </div>
       </div>
 
-     <div class="bottom-left">
-         <div class="time">5:43pm</div>
-         <div class="date">Wedensday, November 12</div>
+        
+     </div>
+
+     <div class="top-right-link">
+      <!-- Finish renaming classes with BEM method and updating stylesheet -->
+         <p class="top-right-link__question top-right-link__content"><span class="top-right-link__icon"><i class="fas fa-camera"></i></span>Like what you see?</p>
+         <div class="top-right-link__description">
+            <a class="top-right-link__heading-container" href="#"> 
+               <h2 class="top-right-link__title">Description Title, Title</h2>
+               <p class="top-right-link__attribute">© copyright info / Attribution / eStock Photo</p>       
+            </a>
+            
+            <hr>
+            <p class="top-right-link__like"><span class="like--heart-icon"><i class="far fa-heart"></i></span>I like it!</p>
+            <p class="like--text">We'll keep showing you pictures like this.</p>
+            <p class="dislike"><span class="dislike--heart-icon"><i class="fa-solid fa-heart-crack"></i></span> Not a fan.</p>
+            <p class="dislike--text">We'll switch to a new picture.</p>
+         </div>
+     </div>
+     
+<!-- <span class="material-symbols-outlined">
+heart_broken
+</span> 
+<span class="dislike--heart-icon"><i class="fa-solid fa-heart-crack"></i></span>-->
+
+     <div class="center-link">
+         <p class = center-link__content><span class="center-link__icon"><i class="fas fa-search"></i></span>Center Icon</p>
+     </div>
+<!--  -->
+     <div class="bottom-left time-container">
+         <div class="bottom-left__time">5:43pm</div>
+         <div class="bottom-left__date">Wedensday, November 12</div>
      </div>
      <div class="bottom-right">
-      <span class="wifi-icon"><i class="fas fa-wifi"></i></span>
-      <span class="power-icon"><i class="fas fa-battery-three-quarters"></i></span>
+      <span class="bottom-right__wifi-icon"><i class="fas fa-wifi"></i></span>
+      <span class="bottom-right__power-icon"><i class="fas fa-battery-three-quarters"></i></span>
      </div>
-  </div> 
-       
+  </main> 
+  
+  <div class="login-form-container">
+   <form action="" id="login-form">
+      <div class="user">
+         <img id="user-img" src="img/profile-placeholder.png" alt="user profile image">
+      <h3 class="user-name">User Name</h3>
+      </div>
+
+      <input type="password" name="password-input" id="">
+   </form>
+</div>
 
     
 
