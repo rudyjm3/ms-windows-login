@@ -26,7 +26,7 @@
   
 </head>
 
-<body>
+<body onload = displayTime();>
 
   <main class="container">
      <div class="top-left-link">
@@ -36,7 +36,6 @@
             <p class="top-left-link__top-content">Link top left Link top left   Link top left Link top left 
             </p>
             <p class="top-left-link__sub-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
          </div>
       </div>
 
@@ -66,12 +65,25 @@ heart_broken
 <span class="dislike--heart-icon"><i class="fa-solid fa-heart-crack"></i></span>-->
 
      <div class="center-link">
-         <p class = center-link__content><span class="center-link__icon"><i class="fas fa-search"></i></span>Center Icon</p>
-     </div>
+        <div class ="center-link__wrapper">
+            <div class ="center-link__icon">
+               <i class="fas fa-search"></i>
+            </div>
+            <div class="center-link__content-wrapper">
+               <p class = "center-link__top-content">Center Icon Icon Center Icon Center Icon Center Icon Center Icon Center Icon</p>
+               <p class="center-link__sub-content">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione error earum quae, molestias illo sed in deleniti sunt. Sunt, obcaecati. Ipsa aspernatur ad omnis exercitationem nisi consectetur eaque consequatur harum?
+            </p>
+            </div>  
+         </div>
+      </div>
+
+         
+         
 <!--  -->
      <div class="bottom-left time-container">
-         <div class="bottom-left__time">5:43pm</div>
-         <div class="bottom-left__date">Wedensday, November 12</div>
+         <div class="bottom-left__time"></div>
+         <div class="bottom-left__date"></div>
      </div>
      <div class="bottom-right">
       <span class="bottom-right__wifi-icon"><i class="fas fa-wifi"></i></span>

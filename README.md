@@ -11,12 +11,12 @@ Recreating the windows lockscreen / login look at functionality.
 
 #Learning:
 - BEM class naming Conventions
-urls:
-css-naming-conventions-that-will-save-you-hours-of-debugging [https://www.freecodecamp.org/news/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849/]
-BEM 101 [https://css-tricks.com/bem-101/]
-[https://github.com/rudyjm3/ms-windows-login/blob/main/ref-sites/CSS%20Naming%20Conventions%20that%20Will%20Save%20You%20Hours%20of%20Debugging.url]
-BEM and SASS, a Perfect Match [https://andrew-barnes.medium.com/bem-and-sass-a-perfect-match-5e48d9bc3894]
+Helpful Links Below:
 
+- [css-naming-conventions-that-will-save-you-hours-of-debugging] (https://www.freecodecamp.org/news/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849/)
+- [BEM 101](https://css-tricks.com/bem-101/)
+- [BEM and SASS, a Perfect Match](https://andrew-barnes.medium.com/bem-and-sass-a-perfect-match-5e48d9bc3894])
+- [Getting the date and formating it](https://www.w3schools.com/jsref/jsref_getday.asp)
 ## Updates
-- Switched over to SASS 9/12/2022
+- Switched project over to SASS 9/12/2022
 - Updated class names in HTML doc for BEM style naming 9/12/2022
