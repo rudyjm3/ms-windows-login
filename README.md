@@ -21,7 +21,7 @@ Recreating the windows lockscreen / login look at functionality.
 ### Screenshot
 
 ![Screen cap](img/ScreenCap_ms-windows-login.png)
-
+![Link to live project](https://rudyjm3.github.io/ms-windows-login/)
 
 #Helpful Links Below:
 (To open url links in a new tab "CTRL" + Left Click)
