@@ -227,7 +227,6 @@ main .center-link__icon {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border: 1px solid yellow;
 }
 main .center-link__wrapper {
   display: flex;
@@ -239,7 +238,6 @@ main .center-link__wrapper {
 main .center-link__content-wrapper {
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
   transition: all 0.5s ease-in-out;
 }
 main .center-link__top-content {
@@ -274,16 +272,14 @@ main .bottom-left__time {
   letter-spacing: 0.2rem;
   word-spacing: 0.2rem;
   transform: scaleY(1.2);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 main .bottom-left__date {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 0.1rem;
+  letter-spacing: 2px;
   word-spacing: 0.2rem;
   transform: scaleY(1.2);
-  transform: scaleX(1.1);
-  margin-left: 16px;
 }
 main .bottom-right {
   font-size: 1.5rem;
