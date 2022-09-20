@@ -31,102 +31,85 @@ function refreshTime() {
 }
 
 
-
-// Hover function
+/*## For top left link elements ########################################
+#####################################################################*/
 const leftIcon = document.querySelector('.top-left-link__icon');
-const contentWrapper = document.querySelector('.top-left-link__content-wrapper');
+const leftContentWrapper = document.querySelector('.top-left-link__content-wrapper');
+const leftTopTxt = document.querySelector('.top-left-link__top-content');
+const leftSubTxt = document.querySelector('.top-left-link__sub-content');
 
-const centerHover = document.querySelector('.center-link');
-const centerWrapper = document.querySelector('.center-link__wrapper');
+//Top left link Hover function/s
+// Hover
+[leftIcon, leftTopTxt, leftSubTxt, leftContentWrapper].forEach((element) => {
+   element.addEventListener('mouseover', () => {
+      leftIcon.style.cssText = "background-color: var(--Dark-Black-Transparent-BG);"
+      leftContentWrapper.style.cssText = "background-color: var(--Dark-Black-Transparent-BG);";
+      leftSubTxt.style.cssText = 'visibility: visible; opacity: 1; transition: visibility 0s linear 0s, opacity 300ms;';
+      leftSubTxt.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. ";
+         
+   });
+});
+// No Hover
+[leftIcon, leftTopTxt, leftSubTxt, leftContentWrapper].forEach((element) => {
+   element.addEventListener('mouseout', () => {
+      leftIcon.style.cssText = "background-color: var(--Black-Transparent-BG);";
+      leftContentWrapper.style.cssText = "background-color: transparent;";
+      leftSubTxt.style.cssText = 'visibility: hidden; opacity: 0; transition: visibility 0s linear 0.5s, opacity 0.5s;';
+      leftSubTxt.innerText = "";    
+   });
+});
+
+/*## For center link elements ########################################
+#####################################################################*/
 const centerContentWrapper = document.querySelector('.center-link__content-wrapper');
 const centerIcon = document.querySelector('.center-link__icon');
 const centerTopTxt = document.querySelector('.center-link__top-content');
 const centerSubTxt = document.querySelector('.center-link__sub-content');
 
-const topContent = document.querySelector('.top-left-link__top-content');
-const subContent = document.querySelector('.top-left-link__sub-content');
-
-console.log(centerIcon);
-//Center link function/s
-centerIcon.addEventListener('mouseover', () => {
-   if(centerTopTxt.className && centerSubTxt.className != 'toggleshow') {
-      centerTopTxt.classList.add('toggleshow');
-      centerSubTxt.classList.add('toggleshow');
-   } else {
-      centerTopTxt.classList.remove('toggleshow');
-      centerSubTxt.classList.remove('toggleshow');
-   }  
+//Center link Hover function/s
+// Hover
+[centerIcon, centerTopTxt, centerSubTxt, centerContentWrapper].forEach((element) => {
+   element.addEventListener('mouseover', () => {
+      centerIcon.style.cssText = "background-color: var(--Dark-Black-Transparent-BG);"
+      centerContentWrapper.style.cssText = "background-color: var(--Dark-Black-Transparent-BG);";
+      centerSubTxt.style.cssText = 'visibility: visible; opacity: 1; transition: visibility 0s linear 0s, opacity 300ms;';
+      centerSubTxt.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione error earum quae, molestias illo sed in deleniti sunt. Sunt, obcaecati. Ipsa aspernatur ad omnis exercitationem nisi consectetur eaque consequatur harum?";
+         
+   });
+});
+// No Hover
+[centerIcon, centerTopTxt, centerSubTxt, centerContentWrapper].forEach((element) => {
+   element.addEventListener('mouseout', () => {
+      centerIcon.style.cssText = "background-color: var(--Black-Transparent-BG);";
+      centerContentWrapper.style.cssText = "background-color: transparent;";
+      centerSubTxt.style.cssText = 'visibility: hidden; opacity: 0; transition: visibility 0s linear 0.5s, opacity 0.5s;';
+      centerSubTxt.innerText = "";    
+   });
 });
 
-centerIcon.addEventListener('mouseout', () => {
-      centerTopTxt.classList.remove('toggleshow');
-      centerSubTxt.classList.remove('toggleshow');
+/*## For top right link elements ########################################
+#####################################################################*/
+const rightContentWrapper = document.querySelector('.top-right-link__content-wrapper');
+const rightIcon = document.querySelector('.top-right-link__icon');
+const rightTopTxt = document.querySelector('.top-right-link__top-content');
+const rightSubCont = document.querySelector('.top-right-link__sub-content');
+//### Top right link Hover function/s ###
+// Hover
+[rightIcon, rightTopTxt, rightSubCont, rightContentWrapper].forEach((element) => {
+   element.addEventListener('mouseover', () => {
+      rightIcon.style.cssText = "background-color: var(--Dark-Black-Transparent-BG);"
+      rightContentWrapper.style.cssText = "background-color: var(--Dark-Black-Transparent-BG);";
+      rightSubCont.style.cssText = 'display: block; visibility: visible; opacity: 1; transition: visibility 0s linear 0s, opacity 300ms;';
+
+         
+   });
+});
+// No Hover
+[rightIcon, rightTopTxt, rightSubCont, rightContentWrapper].forEach((element) => {
+   element.addEventListener('mouseout', () => {
+      rightIcon.style.cssText = "background-color: var(--Black-Transparent-BG);";
+      rightContentWrapper.style.cssText = "background-color: transparent;";
+      rightSubCont.style.cssText = 'visibility: hidden; opacity: 0; transition: visibility 0s linear 0.5s, opacity 0.5s;';   
+   });
 });
 
-centerTopTxt.addEventListener('mouseover', () => {
-   if(centerTopTxt.className && centerSubTxt.className != 'toggleshow') {
-      centerTopTxt.classList.add('toggleshow');
-      centerSubTxt.classList.add('toggleshow');
-   } 
-});
-
-centerContentWrapper.addEventListener('mouseout', () => {
-   console.log('line 49 - Mouse out content-wrapper');
-   // if(centerTopTxt.classList && centerSubTxt.className === 'toggleshow') {
-      centerTopTxt.classList.remove('toggleshow');
-      centerSubTxt.classList.remove('toggleshow');
-   // }
-});
-// centerTopTxt.addEventListener('mouseover', () => {
-//    centerTopTxt.style.cssText = 'background-color: #333;';
-//    centerSubTxt.style.cssText = 'background-color: #333; opacity: 1;';
-// });
-// centerTopTxt.addEventListener('mouseout', () => {
-//    centerTopTxt.style.cssText = 'background-color: transparent;';
-//    centerSubTxt.style.cssText = 'background-color: #333; opacity: 0;';
-// });
-
-
-
-function over() {
-   
-  contentWrapper.style.cssText = "background-color: var(--Black-Transparent-BG);";
-   subContent.style.cssText = "transform: scaleY(1);"; 
-}; 
-
-function out() {
-   contentWrapper.style.cssText = "background-color: transparent;";
-   subContent.style.cssText = "transform: scaleY(0);"; 
-}
-function out2() {
-   contentWrapper.style.cssText = "background-color: transparent;";
-   subContent.style.cssText = "transform: scaleY(0);"; 
-}
-
-topContent.onmouseover = () => {
-   over();
-}
-subContent.onmouseout = () => {
-   out2();
-}
-// topContent.onmouseout = () => {
-//    out();
-// }
-
-
-
-// topContent.onmouseover = () => {
-//    contentWrapper.style.cssText = "background-color: var(--Black-Transparent-BG);";
-//    // topContent.style.cssText = "background-color: var(--Black-Transparent-BG)";
-//    subContent.style.cssText = "transform: scaleY(1);";
-// };
-
-// subContent.onmouseover = () => {
-//    topContent.style.cssText = "background-color: var(--Black-Transparent-BG)";
-// };
-// document.querySelector('.top-left-link__top-content').onmouseout = () => {
-//    topContent.style.cssText = "background-color: transparent;";
-// };
-// document.querySelector('.top-left-link__sub-content').onmouseout = () => {
-//    subContent.style.cssText = "transform: scaleY(0);";
-// };

@@ -31,6 +31,11 @@ Recreating the windows lockscreen / login look at functionality.
 - [BEM 101](https://css-tricks.com/bem-101/)
 - [BEM and SASS, a Perfect Match](https://andrew-barnes.medium.com/bem-and-sass-a-perfect-match-5e48d9bc3894])
 - [Getting the date and formating it](https://www.w3schools.com/jsref/jsref_getday.asp)
+
+#Links for Bing image of the day API
+- (https://stackoverflow.com/questions/10639914/is-there-a-way-to-get-bings-photo-of-the-day)
+- (https://www.codeproject.com/Tips/1044421/Use-Bing-Photo-of-the-Day-in-Your-Application)
+- [Github repository](https://github.com/TimothyYe/bing-wallpaper)
 ## Updates
 - Switched project over to SASS 9/12/2022
 - Updated class names in HTML doc for BEM style naming 9/12/2022
