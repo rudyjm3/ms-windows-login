@@ -32,10 +32,18 @@ Recreating the windows lockscreen / login look at functionality.
 - [BEM and SASS, a Perfect Match](https://andrew-barnes.medium.com/bem-and-sass-a-perfect-match-5e48d9bc3894])
 - [Getting the date and formating it](https://www.w3schools.com/jsref/jsref_getday.asp)
 
-#Links for Bing image of the day API
+#Links that helped with the hover issue:
+- [Toggle Visibility When Hiding Elements](https://css-tricks.com/snippets/css/toggle-visibility-when-hiding-elements/)
+- [Passing multiple variables to an event listener](https://stackoverflow.com/questions/49140978/passing-multiple-variables-to-an-event-listener)
+- [Transtion Timing Function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function), [Also from W3 Schools](https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp)
+
+#Links for Bing image of the day API:
 - (https://stackoverflow.com/questions/10639914/is-there-a-way-to-get-bings-photo-of-the-day)
 - (https://www.codeproject.com/Tips/1044421/Use-Bing-Photo-of-the-Day-in-Your-Application)
 - [Github repository](https://github.com/TimothyYe/bing-wallpaper)
+
+#Random User Image API:
+- [Random User Documentation](https://randomuser.me/documentation)
 ## Updates
 - Switched project over to SASS 9/12/2022
 - Updated class names in HTML doc for BEM style naming 9/12/2022
