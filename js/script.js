@@ -187,3 +187,5 @@ const rightSubCont = document.querySelector('.top-right-link__sub-content');
    });
 });
 
+/* ## LOGIN SECTION FUNCTIONS #################################
+##############################################################*/

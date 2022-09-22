@@ -48,7 +48,7 @@
     <section id="pic-of-day-section">
       <div class="top-left-link">
         <div class="top-left-link__wrapper">
-          <div class="top-left-link__icon"><i class="fas fa-search"></i></div>
+          <div class="top-left-link__icon"><img src="img/icons/icons8-search-32-white.png" alt="view content icon"></div>
           <div class="top-left-link__content-wrapper">
             <p class="top-left-link__top-content">
               Top left Link
@@ -64,7 +64,7 @@
       <div class="top-right-link">
          <div class="top-right-link__wrapper">
             <div class="top-right-link__icon">
-               <i class="fas fa-camera"></i>
+               <img src="img/icons/icons8-camera-32-white.png" alt="camera icon">
             </div>
             <div class="top-right-link__content-wrapper">
                <p class="top-right-link__question top-right-link__top-content">
@@ -109,7 +109,7 @@ heart_broken
       <div class="center-link">
         <div class="center-link__wrapper">
           <div class="center-link__icon">
-            <i class="fas fa-search"></i>
+            <img src="img/icons/icons8-search-32-white.png" alt="view content icon">
           </div>
           <div class="center-link__content-wrapper">
             <p class="center-link__top-content">
@@ -149,20 +149,22 @@ heart_broken
             </div>
             <div class="input-wrapper">
                <input type="password"name="pin-input"id="pin-login-input"maxlength="4"pattern="[0-9]+" placeholder="PIN"/>
-               <input type="submit" hidden />
+               <span class="view-icon-span"><img src="img/icons/icons8-eye-32.png" class="eye-icon" alt="view icon"></span></input>
+               <button id="submit-btn"><img src="img/icons/icons8-right-32-white.png" alt="pin submit button"></button>
             </div>
+            
             <div class="options-main-container">
                <div class="forgot-info-wrapper">
-                  <a href="#" class="forgot">I forgot my PIN</a>
+                  <a href="#" class="forgot-link">I forgot my PIN</a>
                </div>
                <div class="sign-in-options-container">
                   <a href="#" class="signin-option-link">Sign-in Options</a>
-                  <button id="keypad-btn" class="option-btn"><img src="img/icons/icons8-keypad-32-white.png" alt="pin pad input selection button" ></button>
-                  <button id="pwd-btn" class="option-btn"><img src="img/icons/icons8-rename-32-white.png" alt="Password input selection button" ></button>
-               </div>
-               
+                  <div class="options-btns-wrapper">
+                     <button id="keypad-btn" class="option-btn" data-title="PIN"><img src="img/icons/icons8-keypad-32-white.png" alt="pin pad input selection button"></button>
+                     <button id="pwd-btn" class="option-btn" data-title="Microsoft account password"><img src="img/icons/icons8-rename-32-white.png" alt="Password input selection button"></button>
+                  </div>
+               </div> 
             </div>
-
          </form>
       </div>
    </section>      

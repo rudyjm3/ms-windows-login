@@ -75,8 +75,8 @@ input {
   font-size: 15px;
   color: rgb(231, 231, 231);
   --Main-Font-Color: rgb(231, 231, 231);
-  --Black-Transparent-BG: rgba(51, 51, 51, 0.6);
-  --Dark-Black-Transparent-BG: rgba(51, 51, 51, 0.8);
+  --Black-Transparent-BG: rgba(45, 45, 45, 0.6);
+  --Dark-Black-Transparent-BG: rgba(22, 22, 22, 0.8);
   --Light-Grey: #b9c1c2;
   --Light-Grey-Hover: rgba(185, 193, 194, 0.6);
 }
@@ -88,8 +88,10 @@ body {
   align-items: center;
   background-color: #2a3158;
   font-family: "Poppins", sans-serif;
+  height: 100vh;
   max-width: 100%;
   flex-direction: column;
+  overflow: hidden !important;
 }
 
 #pic-of-day-section {
@@ -105,6 +107,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 25px;
+  z-index: 2;
 }
 #pic-of-day-section .top-left-link,
 #pic-of-day-section .top-right-link {
@@ -121,14 +124,13 @@ body {
 #pic-of-day-section .center-link__icon {
   background-color: var(--Black-Transparent-BG);
   border-radius: 50%;
-  font-size: 18px;
-  padding: 3px 8px;
-  line-height: 1.5;
+  padding: 4px 5px;
+  width: 31.33px;
 }
-#pic-of-day-section .top-left-link__icon i,
-#pic-of-day-section .top-right-link__icon i,
-#pic-of-day-section .center-link__icon i {
-  transform: rotateY(180deg);
+#pic-of-day-section .top-left-link__icon img,
+#pic-of-day-section .top-right-link__icon img,
+#pic-of-day-section .center-link__icon img {
+  width: 21px;
 }
 #pic-of-day-section .top-left-link {
   top: 40px;
@@ -367,10 +369,15 @@ body {
   }
 }
 
+.pic-of-day-filter {
+  filter: blur(20px) brightness(0.7);
+}
+
 /* ## LOGIN SECTION STYLING ####################################
 ###############################################################*/
 #login-section {
-  position: relative;
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,13 +385,16 @@ body {
   width: 100%;
   height: 100vh;
   padding: 25px;
+  background-color: rgba(14, 14, 14, 0.5);
+  opacity: 1;
+  transition: all 0.1s ease-in;
+  z-index: 10;
 }
 
 .login-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(51, 51, 51, 0.5);
   border-radius: 2px;
   width: 250px;
   height: auto;
@@ -402,7 +412,6 @@ body {
   align-items: center;
   flex-direction: column;
   margin-bottom: 20px;
-  background-color: red;
 }
 .login-form-container #login-form .user-wrapper #user-img {
   border-radius: 50%;
@@ -415,22 +424,24 @@ body {
 }
 .login-form-container #login-form .input-wrapper {
   width: 100%;
+  position: relative;
+  margin-bottom: 15px;
 }
 .login-form-container #login-form .input-wrapper #pin-login-input {
   width: 100%;
   height: 35px;
-  padding: 6px 30px 6px 6px;
+  padding: 6px 72px 6px 6px;
   font-weight: 500;
   background-color: var(--Black-Transparent-BG);
-  border: 1px solid white;
+  border: 2px solid var(--Light-Grey);
 }
 .login-form-container #login-form .input-wrapper #pin-login-input:hover {
-  border: 1px solid white;
+  border: 2px solid white;
   background-color: var(--Dark-Black-Transparent-BG);
 }
 .login-form-container #login-form .input-wrapper #pin-login-input:focus {
   border: none;
-  outline: 1.5px solid rgb(209, 209, 209);
+  outline: 2px solid rgb(209, 209, 209);
   background-color: white;
 }
 .login-form-container #login-form .input-wrapper #pin-login-input::-moz-placeholder {
@@ -441,4 +452,118 @@ body {
 }
 .login-form-container #login-form .input-wrapper #pin-login-input::placeholder {
   color: rgb(219, 219, 219);
+}
+.login-form-container #login-form .input-wrapper .view-icon-span {
+  position: absolute;
+  top: 2px;
+  left: 185px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+  height: 31px;
+  cursor: pointer;
+}
+.login-form-container #login-form .input-wrapper .view-icon-span img {
+  width: 50%;
+  filter: contrast(0.5);
+}
+.login-form-container #login-form .input-wrapper .view-icon-span:hover {
+  background-color: rgb(185, 125, 61);
+}
+.login-form-container #login-form .input-wrapper .view-icon-span:hover img {
+  filter: invert(100%);
+}
+.login-form-container #login-form .input-wrapper #submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  left: 216.5px;
+  height: 31px;
+  background-color: #b4b4b4;
+  border: none;
+  cursor: pointer;
+}
+.login-form-container #login-form .input-wrapper #submit-btn img {
+  width: 90%;
+}
+.login-form-container #login-form .input-wrapper #submit-btn:hover {
+  background-color: rgb(185, 125, 61);
+  border-style: none;
+}
+.login-form-container #login-form .options-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.login-form-container #login-form .options-main-container .forgot-info-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-form-container #login-form .options-main-container .forgot-info-wrapper .forgot-link {
+  color: var(--Main-Font-Color);
+  font-size: 0.8rem;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .signin-option-link {
+  color: var(--Main-Font-Color);
+  text-align: center;
+  font-size: 0.8rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  visibility: hidden;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper .option-btn {
+  width: 40px;
+  padding-top: 4px;
+  background-color: rgb(122, 113, 113);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper .option-btn:hover {
+  border: 1.5px solid var(--Light-Grey);
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper [data-title] {
+  position: relative;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper [data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.4s ease-in-out 0.4s;
+  visibility: visible;
+}
+.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper [data-title]:after {
+  content: attr(data-title);
+  background-color: rgba(51, 51, 51, 0.95);
+  color: var(--Main-Font-Color);
+  font-size: 0.7rem;
+  position: absolute;
+  padding: 5px 8px;
+  bottom: 90%;
+  left: 10%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #111111;
+  z-index: 99999;
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */
