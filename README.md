@@ -37,6 +37,9 @@ Recreating the windows lockscreen / login look at functionality.
 - [Passing multiple variables to an event listener](https://stackoverflow.com/questions/49140978/passing-multiple-variables-to-an-event-listener)
 - [Transtion Timing Function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function), [Also from W3 Schools](https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp)
 
+
+##Assests and API
+
 #Links for Bing image of the day API:
 - (https://stackoverflow.com/questions/10639914/is-there-a-way-to-get-bings-photo-of-the-day)
 - (https://www.codeproject.com/Tips/1044421/Use-Bing-Photo-of-the-Day-in-Your-Application)
@@ -44,6 +47,11 @@ Recreating the windows lockscreen / login look at functionality.
 
 #Random User Image API:
 - [Random User Documentation](https://randomuser.me/documentation)
+
+#Icon Set:
+- [Icons by:Icons8.com](https://icons8.com)
+-- [Windows 10 Icons by: Icons8.com](https://icons8.com/icon/set/windows/windows)
+
 ## Updates
 - Switched project over to SASS 9/12/2022
 - Updated class names in HTML doc for BEM style naming 9/12/2022

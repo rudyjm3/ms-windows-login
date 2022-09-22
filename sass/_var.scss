@@ -64,6 +64,12 @@
    // color: rgb(231, 231, 231);
 }
 
+input {
+   width: 100%;
+   height: 40px;
+}
+
+
  :root {
    font-family: 'Open Sans', sans-serif;
    // Weights 400, 500, 600, 700, 800. Italic 400, 500  are useable
@@ -72,7 +78,7 @@
 
    --Main-Font-Color: rgb(231, 231, 231);
    --Black-Transparent-BG: rgba(51, 51, 51, 0.6); 
-   --Dark-Black-Transparent-BG: rgba(51, 51, 51, 0.9);
+   --Dark-Black-Transparent-BG: rgba(51, 51, 51, 0.8);
    --Light-Grey: #b9c1c2; //#918f8d
    --Light-Grey-Hover: rgba(185, 193, 194, 0.6);
  }

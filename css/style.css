@@ -65,33 +65,34 @@ a {
   text-decoration: none;
 }
 
+input {
+  width: 100%;
+  height: 40px;
+}
+
 :root {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   color: rgb(231, 231, 231);
   --Main-Font-Color: rgb(231, 231, 231);
   --Black-Transparent-BG: rgba(51, 51, 51, 0.6);
-  --Dark-Black-Transparent-BG: rgba(51, 51, 51, 0.9);
+  --Dark-Black-Transparent-BG: rgba(51, 51, 51, 0.8);
   --Light-Grey: #b9c1c2;
   --Light-Grey-Hover: rgba(185, 193, 194, 0.6);
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #2a3158;
   font-family: "Poppins", sans-serif;
-  overflow: hidden !important;
-  height: 100vh;
   max-width: 100%;
-  background-image: url("../img/bg-1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  flex-direction: column;
 }
 
-main {
+#pic-of-day-section {
   position: relative;
   display: flex;
   justify-content: center;
@@ -99,115 +100,119 @@ main {
   background-color: rgba(255, 255, 255, 0.082);
   width: 100%;
   height: 100vh;
+  background-image: url("../img/bg-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 25px;
 }
-main .top-left-link,
-main .top-right-link {
+#pic-of-day-section .top-left-link,
+#pic-of-day-section .top-right-link {
   position: absolute;
   cursor: pointer;
 }
-main .center-link,
-main .bottom-left,
-main .bottom-right {
+#pic-of-day-section .center-link,
+#pic-of-day-section .bottom-left,
+#pic-of-day-section .bottom-right {
   position: absolute;
 }
-main .top-left-link__icon,
-main .top-right-link__icon,
-main .center-link__icon {
+#pic-of-day-section .top-left-link__icon,
+#pic-of-day-section .top-right-link__icon,
+#pic-of-day-section .center-link__icon {
   background-color: var(--Black-Transparent-BG);
   border-radius: 50%;
   font-size: 18px;
   padding: 3px 8px;
   line-height: 1.5;
 }
-main .top-left-link__icon i,
-main .top-right-link__icon i,
-main .center-link__icon i {
+#pic-of-day-section .top-left-link__icon i,
+#pic-of-day-section .top-right-link__icon i,
+#pic-of-day-section .center-link__icon i {
   transform: rotateY(180deg);
 }
-main .top-left-link {
+#pic-of-day-section .top-left-link {
   top: 40px;
   left: 40px;
   width: 250px;
 }
-main .top-left-link__wrapper {
+#pic-of-day-section .top-left-link__wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
   width: 100%;
 }
-main .top-left-link__content-wrapper {
+#pic-of-day-section .top-left-link__content-wrapper {
   display: flex;
   flex-direction: column;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-main .top-left-link__top-content {
+#pic-of-day-section .top-left-link__top-content {
   line-height: 1.2;
   padding: 5px 7px 0px 7px;
   transition: background-color 0.3s ease-in-out;
 }
-main .top-left-link__sub-content {
+#pic-of-day-section .top-left-link__sub-content {
   width: 100%;
   font-size: 12px;
   line-height: 1.2;
   padding: 0px 7px 10px 7px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-main .top-right-link {
+#pic-of-day-section .top-right-link {
   top: 40px;
   right: 70px;
   width: 250px;
 }
-main .top-right-link__wrapper {
+#pic-of-day-section .top-right-link__wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
   width: 100%;
 }
-main .top-right-link__icon {
+#pic-of-day-section .top-right-link__icon {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-main .top-right-link__content-wrapper {
+#pic-of-day-section .top-right-link__content-wrapper {
   display: flex;
   flex-direction: column;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-main .top-right-link__top-content {
+#pic-of-day-section .top-right-link__top-content {
   line-height: 1.2;
   padding: 5px 7px 0px 7px;
 }
-main .top-right-link__sub-content {
+#pic-of-day-section .top-right-link__sub-content {
   width: 100%;
   line-height: 1.2;
   display: none;
   visibility: hidden;
   opacity: 0;
 }
-main .top-right-link .top-right-link__ul-title {
+#pic-of-day-section .top-right-link .top-right-link__ul-title {
   font-size: 1.3rem;
   line-height: 1.3;
-  padding: 7px;
+  padding: 7px 7px 7px 15px;
   margin-bottom: 5px;
 }
-main .top-right-link .top-right-link__ul-title:hover {
+#pic-of-day-section .top-right-link .top-right-link__ul-title:hover {
   background-color: var(--Light-Grey-Hover);
 }
-main .top-right-link__title {
+#pic-of-day-section .top-right-link__title {
   color: var(--Main-Font-Color);
 }
-main .top-right-link__attribute {
+#pic-of-day-section .top-right-link__attribute {
   font-size: 10px;
   color: var(--Light-Grey);
   padding: 10px;
 }
-main .top-right-link__attribute:hover {
+#pic-of-day-section .top-right-link__attribute:hover {
   background-color: var(--Light-Grey-Hover);
 }
-main .top-right-link hr {
+#pic-of-day-section .top-right-link hr {
   border-style: none;
   border-top-style: solid;
   border-width: 1px;
@@ -215,66 +220,66 @@ main .top-right-link hr {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main .top-right-link__ul {
+#pic-of-day-section .top-right-link__ul {
   padding: 10px;
 }
-main .top-right-link__ul .top-right-link__like {
+#pic-of-day-section .top-right-link__ul .top-right-link__like {
   padding: 5px 0;
   margin-bottom: 15px;
 }
-main .top-right-link__ul .top-right-link__like .top-right-link__like--heart-icon i {
+#pic-of-day-section .top-right-link__ul .top-right-link__like .top-right-link__like--heart-icon i {
   margin-right: 10px;
 }
-main .top-right-link__ul .top-right-link__like .top-right-link__like--text {
+#pic-of-day-section .top-right-link__ul .top-right-link__like .top-right-link__like--text {
   margin-left: 30px;
   font-size: 10px;
   color: var(--Light-Grey);
 }
-main .top-right-link__ul .top-right-link__dislike {
+#pic-of-day-section .top-right-link__ul .top-right-link__dislike {
   padding: 5px 0;
 }
-main .top-right-link__ul .top-right-link__dislike .top-right-link__dislike--heart-icon i {
+#pic-of-day-section .top-right-link__ul .top-right-link__dislike .top-right-link__dislike--heart-icon i {
   margin-right: 10px;
 }
-main .top-right-link__ul .top-right-link__dislike .top-right-link__dislike--text {
+#pic-of-day-section .top-right-link__ul .top-right-link__dislike .top-right-link__dislike--text {
   margin-left: 30px;
   font-size: 10px;
   color: var(--Light-Grey);
 }
-main .top-right-link__ul .top-right-link__like:hover {
+#pic-of-day-section .top-right-link__ul .top-right-link__like:hover {
   background-color: var(--Light-Grey-Hover);
 }
-main .top-right-link__ul .top-right-link__dislike:hover {
+#pic-of-day-section .top-right-link__ul .top-right-link__dislike:hover {
   background-color: var(--Light-Grey-Hover);
 }
-main .center-link {
+#pic-of-day-section .center-link {
   top: 50%;
   margin: auto 0;
   width: 250px;
 }
-main .center-link__wrapper {
+#pic-of-day-section .center-link__wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
   width: 100%;
 }
-main .center-link__icon {
+#pic-of-day-section .center-link__icon {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-main .center-link__content-wrapper {
+#pic-of-day-section .center-link__content-wrapper {
   display: flex;
   flex-direction: column;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-main .center-link__top-content {
+#pic-of-day-section .center-link__top-content {
   line-height: 1.2;
   padding: 5px 7px 0px 7px;
   padding-bottom: 2px;
 }
-main .center-link__sub-content {
+#pic-of-day-section .center-link__sub-content {
   width: 100%;
   font-size: 12px;
   line-height: 1.2;
@@ -282,15 +287,15 @@ main .center-link__sub-content {
   visibility: hidden;
   opacity: 0;
 }
-main .bottom-left {
+#pic-of-day-section .bottom-left {
   bottom: 40px;
   left: 40px;
 }
-main .bottom-right {
+#pic-of-day-section .bottom-right {
   bottom: 40px;
   right: 40px;
 }
-main .bottom-left__time {
+#pic-of-day-section .bottom-left__time {
   font-size: 4.5rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
@@ -298,27 +303,142 @@ main .bottom-left__time {
   transform: scaleY(1.2);
   margin-bottom: 10px;
 }
-main .bottom-left__date {
+#pic-of-day-section .bottom-left__date {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 2px;
   word-spacing: 0.2rem;
   transform: scaleY(1.2);
 }
-main .bottom-right {
+#pic-of-day-section .bottom-right {
   font-size: 1.5rem;
   font-weight: 300;
 }
-main .bottom-right__wifi-icon, main .bottom-right__power-icon {
-  margin-left: 20px;
+#pic-of-day-section .bottom-right__wifi-icon, #pic-of-day-section .bottom-right__power-icon {
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
 }
-main .bottom-right__wifi-icon i {
+#pic-of-day-section .bottom-right__wifi-icon .wifi-icon-img {
   transform: rotate(315deg);
+}
+#pic-of-day-section .bottom-right .charging-pulse-effect {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 59px;
+  bottom: -17px;
+  height: 15px;
+  width: 30px;
+  /* background-color: white; */
+  border-radius: 4px;
+  filter: blur(3px) drop-shadow(0px 0px 10px #333333);
+  /* z-index: -1; */
+  /* box-shadow: 0 0 0 0 rgb(255 255 255); */
+  -webkit-animation: pulse-white 1.5s infinite;
+  animation: pulse-white 1.5s infinite;
+}
+@-webkit-keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* ## LOGIN SECTION STYLING ####################################
+###############################################################*/
+#login-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(223, 61, 61, 0.519);
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
 }
 
 .login-form-container {
-  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(51, 51, 51, 0.5);
   border-radius: 2px;
-  display: none;
+  width: 250px;
+  height: auto;
+}
+.login-form-container #login-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 250px;
+}
+.login-form-container #login-form .user-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: red;
+}
+.login-form-container #login-form .user-wrapper #user-img {
+  border-radius: 50%;
+  width: 60%;
+  margin-bottom: 15px;
+}
+.login-form-container #login-form .user-wrapper #user-name {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.login-form-container #login-form .input-wrapper {
+  width: 100%;
+}
+.login-form-container #login-form .input-wrapper #pin-login-input {
+  width: 100%;
+  height: 35px;
+  padding: 6px 30px 6px 6px;
+  font-weight: 500;
+  background-color: var(--Black-Transparent-BG);
+  border: 1px solid white;
+}
+.login-form-container #login-form .input-wrapper #pin-login-input:hover {
+  border: 1px solid white;
+  background-color: var(--Dark-Black-Transparent-BG);
+}
+.login-form-container #login-form .input-wrapper #pin-login-input:focus {
+  border: none;
+  outline: 1.5px solid rgb(209, 209, 209);
+  background-color: white;
+}
+.login-form-container #login-form .input-wrapper #pin-login-input::-moz-placeholder {
+  color: rgb(219, 219, 219);
+}
+.login-form-container #login-form .input-wrapper #pin-login-input:-ms-input-placeholder {
+  color: rgb(219, 219, 219);
+}
+.login-form-container #login-form .input-wrapper #pin-login-input::placeholder {
+  color: rgb(219, 219, 219);
 }/*# sourceMappingURL=style.css.map */

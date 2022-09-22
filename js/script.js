@@ -1,3 +1,76 @@
+/* ## POWER LEVEL FUNCTION ############################
+######################################################*/
+const powerIcon = document.querySelector('.bottom-right__power-icon');
+const pulseEffect = document.querySelector('.pulse-effect');
+let batteryIsCharging = false;
+
+navigator.getBattery().then((battery) => {
+
+   battery.addEventListener('chargingchange', () => {
+      batteryIsCharging = battery.charging;
+      
+      console.log(batteryIsCharging);
+      if (battery.charging === true) {
+         powerIcon.innerHTML = 
+         `<img class="power-icon-img icon" src="img/icons/icons8-recharge-battery-32-white.png" alt="charging icon" />`;
+         pulseEffect.classList.add('charging-pulse-effect');
+      } else {
+         powerIcon.innerHTML = 
+         `<img class="power-icon-img icon" src="img/icons/icons8-charged-battery-32-white.png" alt="battery icon" />`;
+         pulseEffect.classList.remove('charging-pulse-effect');
+      }
+   });
+});
+
+
+// navigator.getBattery().then((battery) => {
+//   batteryIsCharging = battery.charging;
+
+//   battery.addEventListener('chargingchange', () => {
+//     batteryIsCharging = battery.charging;
+//     console.log(batteryIsCharging);
+//     if (battery.charging === true) {
+//       alert ('It\'s charging now');
+//       document.querySelector('.bottom-right__power-icon').innerHTML = 
+//       `<img class="power-icon-img icon" src="img/icons/icons8-charging-battery-32-white.png" alt="charging icon" />`;
+//     } else {
+//       alert('Not charging');
+//     }
+
+//   });
+// });
+// console.log(navigator.getBattery());
+
+// ############################################################
+// let batteryPromise = navigator.getBattery();
+// batteryPromise.then(batteryCallback);
+
+// function batteryCallback(batteryObject) {
+//    printBatteryStatus(batteryObject);
+// }
+// function printBatteryStatus(batteryObject) {
+//     console.log("IsCharging", batteryObject.charging);
+//     console.log("Percentage", batteryObject.level);
+   
+//     console.log("charging Time", batteryObject.chargingTime);
+//     console.log("DisCharging Time", batteryObject.dischargingTime);
+// }
+// ####################################################
+
+
+/* ## Press enter key to submit function #########################
+#################################################################*/
+const pinInput = document.getElementById('pin-login-input');
+
+pinInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+
+/* ## TIME AND DATE FUNCTIONS ########################
+#####################################################*/
 //Get time for bottom-left
 function displayTime() {
    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -29,6 +102,7 @@ function refreshTime() {
    var refresh = 1000;
    mytime = setTimeout('displayTime()', refresh);
 }
+// #####################################################
 
 
 /*## For top left link elements ########################################

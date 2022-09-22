@@ -8,7 +8,7 @@
     <meta name="description" content="Windows 10 Login Recreation" />
     <meta name="author" content="Rudy" />
 
-    <title>Windows Login Recreation</title>
+    <title>Windows 10 Lockscreen / Login Recreation</title>
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,8 +44,8 @@
 
   <body onload="displayTime();">
 
-   
-    <main class="container">
+
+    <section id="pic-of-day-section">
       <div class="top-left-link">
         <div class="top-left-link__wrapper">
           <div class="top-left-link__icon"><i class="fas fa-search"></i></div>
@@ -128,27 +128,45 @@ heart_broken
         <div class="bottom-left__date"></div>
       </div>
       <div class="bottom-right">
-        <span class="bottom-right__wifi-icon"><i class="fas fa-wifi"></i></span>
+        <span class="bottom-right__wifi-icon"><img class="wifi-icon-img icon" src="img/icons/icons8-wi-fi-32-white.png" alt="wifi icon" /></span>
         <span class="bottom-right__power-icon"
-          ><i class="fas fa-battery-three-quarters"></i
-        ></span>
+          ><img class="power-icon-img icon" src="img/icons/icons8-recharge-battery-32-white.png" alt="charging icon" />
+         </span>
+         <span class="pulse-effect charging-pulse-effect"></span>
       </div>
-    </main>
+    </section>
 
-    <div class="login-form-container">
-      <form action="" id="login-form">
-        <div class="user">
-          <img
-            id="user-img"
-            src="img/profile-placeholder.png"
-            alt="user profile image"
-          />
-          <h3 class="user-name">User Name</h3>
-        </div>
+   <section id="login-section">
+      <div class="login-form-container">
+         <form action="" id="login-form">
+            <div class="user-wrapper">
+               <img
+               id="user-img"
+               src="img/profile-placeholder.png"
+               alt="user profile image"
+               />
+               <h3 id="user-name">User Name</h3>
+            </div>
+            <div class="input-wrapper">
+               <input type="password"name="pin-input"id="pin-login-input"maxlength="4"pattern="[0-9]+" placeholder="PIN"/>
+               <input type="submit" hidden />
+            </div>
+            <div class="options-main-container">
+               <div class="forgot-info-wrapper">
+                  <a href="#" class="forgot">I forgot my PIN</a>
+               </div>
+               <div class="sign-in-options-container">
+                  <a href="#" class="signin-option-link">Sign-in Options</a>
+                  <button id="keypad-btn" class="option-btn"><img src="img/icons/icons8-keypad-32-white.png" alt="pin pad input selection button" ></button>
+                  <button id="pwd-btn" class="option-btn"><img src="img/icons/icons8-rename-32-white.png" alt="Password input selection button" ></button>
+               </div>
+               
+            </div>
 
-        <input type="password" name="password-input" id="" />
-      </form>
-    </div>
+         </form>
+      </div>
+   </section>      
+   
 
     <script src="js/script.js"></script>
   </body>
