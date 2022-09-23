@@ -63,9 +63,11 @@ navigator.getBattery().then((battery) => {
 const pinInput = document.getElementById('pin-login-input');
 
 pinInput.addEventListener("keypress", function(event) {
+   debugger
   if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("myBtn").click();
+   //  event.preventDefault();
+    document.getElementById("submit-btn").click();
+    console.log('Submit button was clicked' + pinInput.value);
   }
 });
 
@@ -189,3 +191,12 @@ const rightSubCont = document.querySelector('.top-right-link__sub-content');
 
 /* ## LOGIN SECTION FUNCTIONS #################################
 ##############################################################*/
+
+//## Sign-in Options link function ########################
+let showOptBtns = document.querySelector('.options-btns-wrapper');
+let optLink = document.querySelector('.signin-option-link');
+
+optLink.addEventListener('click', ()=> {
+   showOptBtns.classList.toggle('show-opt-btns');
+});
+

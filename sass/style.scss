@@ -470,13 +470,17 @@ body{
                width: 100%;
                margin-bottom: 10px;
             }
+                        }
             .options-btns-wrapper {
                display: flex;
                justify-content: space-between;
                align-items: center;
                gap: 5px;
                width: fit-content;
-               visibility: hidden;
+               // visibility: hidden;
+               transform: scale(0);
+               transition: transform 0.3s ease-in-out;
+               transform-origin: center;
 
                .option-btn {
                   width: 40px;
@@ -512,7 +516,12 @@ body{
                   z-index: 99999;
                   visibility: hidden;
               }
+
             }
+            //Add class to .options-btn-container to make it visiable
+            .show-opt-btns {
+               // visibility: visible;
+               transform: scale(1);
          }
       }
       

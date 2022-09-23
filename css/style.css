@@ -523,7 +523,7 @@ body {
   width: 100%;
   margin-bottom: 10px;
 }
-.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper {
+.login-form-container #login-form .options-main-container .options-btns-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -531,27 +531,29 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
 }
-.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper .option-btn {
+.login-form-container #login-form .options-main-container .options-btns-wrapper .option-btn {
   width: 40px;
   padding-top: 4px;
   background-color: rgb(122, 113, 113);
   border: 1.5px solid transparent;
   cursor: pointer;
 }
-.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper .option-btn:hover {
+.login-form-container #login-form .options-main-container .options-btns-wrapper .option-btn:hover {
   border: 1.5px solid var(--Light-Grey);
 }
-.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper [data-title] {
+.login-form-container #login-form .options-main-container .options-btns-wrapper [data-title] {
   position: relative;
 }
-.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper [data-title]:hover:after {
+.login-form-container #login-form .options-main-container .options-btns-wrapper [data-title]:hover:after {
   opacity: 1;
   transition: all 0.4s ease-in-out 0.4s;
   visibility: visible;
 }
-.login-form-container #login-form .options-main-container .sign-in-options-container .options-btns-wrapper [data-title]:after {
+.login-form-container #login-form .options-main-container .options-btns-wrapper [data-title]:after {
   content: attr(data-title);
   background-color: rgba(51, 51, 51, 0.95);
   color: var(--Main-Font-Color);
@@ -566,4 +568,7 @@ body {
   border: 1px solid #111111;
   z-index: 99999;
   visibility: hidden;
+}
+.login-form-container #login-form .options-main-container .show-opt-btns {
+  transform: scale(1);
 }/*# sourceMappingURL=style.css.map */
