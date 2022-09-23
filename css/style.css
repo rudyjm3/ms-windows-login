@@ -432,6 +432,7 @@ body {
   height: 35px;
   padding: 6px 72px 6px 6px;
   font-weight: 500;
+  color: var(--Main-Font-Color);
   background-color: var(--Black-Transparent-BG);
   border: 2px solid var(--Light-Grey);
 }
@@ -440,6 +441,7 @@ body {
   background-color: var(--Dark-Black-Transparent-BG);
 }
 .login-form-container #login-form .input-wrapper #pin-login-input:focus {
+  color: #333;
   border: none;
   outline: 2px solid rgb(209, 209, 209);
   background-color: white;

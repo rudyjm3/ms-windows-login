@@ -138,7 +138,7 @@ heart_broken
 
    <section id="login-section">
       <div class="login-form-container">
-         <form action="" id="login-form">
+         <form action="" id="login-form" onsubmit="return false;">
             <div class="user-wrapper">
                <img
                id="user-img"
@@ -148,9 +148,9 @@ heart_broken
                <h3 id="user-name">User Name</h3>
             </div>
             <div class="input-wrapper">
-               <input type="password"name="pin-input"id="pin-login-input"maxlength="4"pattern="[0-9]+" placeholder="PIN"/>
+               <input type="password"name="pin-input"id="pin-login-input"maxlength="4"pattern="[0-9]+" placeholder="PIN#"/>
                <span class="view-icon-span"><img src="img/icons/icons8-eye-32.png" class="eye-icon" alt="view icon"></span></input>
-               <button id="submit-btn"><img src="img/icons/icons8-right-32-white.png" alt="pin submit button"></button>
+               <button id="submit-btn" type="submit"><img src="img/icons/icons8-right-32-white.png" alt="pin submit button"></button>
             </div>
             
             <div class="options-main-container">
