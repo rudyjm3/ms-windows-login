@@ -65,7 +65,7 @@ const pinInput = document.getElementById('pin-login-input');
 pinInput.addEventListener("keypress", function(event) {
    debugger
   if (event.key === "Enter") {
-   //  event.preventDefault();
+    event.preventDefault();
     document.getElementById("submit-btn").click();
     console.log('Submit button was clicked' + pinInput.value);
   }
