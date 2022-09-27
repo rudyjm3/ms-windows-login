@@ -1,61 +1,50 @@
-/* ## POWER LEVEL FUNCTION ############################
-######################################################*/
-const powerIcon = document.querySelector('.bottom-right__power-icon');
-const pulseEffect = document.querySelector('.pulse-effect');
-let batteryIsCharging = false;
-
-navigator.getBattery().then((battery) => {
-
-   battery.addEventListener('chargingchange', () => {
-      batteryIsCharging = battery.charging;
+/* ## API FETCHES ###################################
+####################################################*/
+// ## Random User API Fetch
+// fetch('https://randomuser.me/api/?format=json&?nat=us,br')
+// .then((data) =>{
+//    return data.json()
+// }).then((userData) => {
+//    console.log(userData);
+//    userData.map((randomUserData) => {
       
-      console.log(batteryIsCharging);
-      if (battery.charging === true) {
-         powerIcon.innerHTML = 
-         `<img class="power-icon-img icon" src="img/icons/icons8-recharge-battery-32-white.png" alt="charging icon" />`;
-         pulseEffect.classList.add('charging-pulse-effect');
-      } else {
-         powerIcon.innerHTML = 
-         `<img class="power-icon-img icon" src="img/icons/icons8-charged-battery-32-white.png" alt="battery icon" />`;
-         pulseEffect.classList.remove('charging-pulse-effect');
-      }
-   });
-});
+//    })
+// }).catch((err) => {
+//    console.log(err);
+// })
 
+fetch('https://randomuser.me/api/?format=json&nat=us,br&inc=name,email,picture')
+//returning name, picture, and email only for US or British
+// .then(response => response.json())
+// .then(userdata => console.log(userdata))
+// .catch(err => console.log(err));
+   .then((userData) => {
+      return userData.json();
+   }).then(getRandomUser);
+   // .then((userData) =>{
+   //    console.log(userData.results[0].gender);
+   // });
 
-// navigator.getBattery().then((battery) => {
-//   batteryIsCharging = battery.charging;
+function getRandomUser(userData) {
+   console.log(userData);
+   // console.log(userData.results[0].gender);
+   console.log(userData.results[0].picture.large);
+   // console.log(userData.results[0].nat);
 
-//   battery.addEventListener('chargingchange', () => {
-//     batteryIsCharging = battery.charging;
-//     console.log(batteryIsCharging);
-//     if (battery.charging === true) {
-//       alert ('It\'s charging now');
-//       document.querySelector('.bottom-right__power-icon').innerHTML = 
-//       `<img class="power-icon-img icon" src="img/icons/icons8-charging-battery-32-white.png" alt="charging icon" />`;
-//     } else {
-//       alert('Not charging');
-//     }
+   let userImg = document.getElementById('user-img');
+   userImg.src = userData.results[0].picture.large;
 
-//   });
-// });
-// console.log(navigator.getBattery());
+   let userName = document.getElementById('user-name');
+   userName.textContent = `${userData.results[0].name.first} ${userData.results[0].name.last}`;
 
-// ############################################################
-// let batteryPromise = navigator.getBattery();
-// batteryPromise.then(batteryCallback);
+   let userEmail = userData.results[0].email;
+   console.log(userEmail);
 
-// function batteryCallback(batteryObject) {
-//    printBatteryStatus(batteryObject);
-// }
-// function printBatteryStatus(batteryObject) {
-//     console.log("IsCharging", batteryObject.charging);
-//     console.log("Percentage", batteryObject.level);
-   
-//     console.log("charging Time", batteryObject.chargingTime);
-//     console.log("DisCharging Time", batteryObject.dischargingTime);
-// }
-// ####################################################
+}
+
+//### Generate random pin number 
+const randomPin = Math.floor(1000 + Math.random() * 9000);
+console.log(randomPin);
 
 
 /* ## Press enter key to submit function #########################
@@ -203,4 +192,4 @@ optLink.addEventListener('click', ()=> {
    showOptBtns.classList.toggle('show-opt-btns');
 });
 
-//## Select SIGN-IN OPTION FUNCTION #########################
+//## Select SIGN-IN OPTION FUNCTION ########################

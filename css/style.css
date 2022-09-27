@@ -79,6 +79,7 @@ input {
   --Dark-Black-Transparent-BG: rgba(22, 22, 22, 0.8);
   --Light-Grey: #b9c1c2;
   --Light-Grey-Hover: rgba(185, 193, 194, 0.6);
+  --percent-text: "%";
 }
 
 body {
@@ -324,6 +325,17 @@ body {
 #pic-of-day-section .bottom-right__wifi-icon .wifi-icon-img {
   transform: rotate(315deg);
 }
+#pic-of-day-section .bottom-right__power-icon:before {
+  content: var(--percent-text);
+  position: absolute;
+  top: -18px;
+  left: 2px;
+  font-size: 12px;
+  visibility: hidden;
+}
+#pic-of-day-section .bottom-right__power-icon:hover::before {
+  visibility: visible;
+}
 #pic-of-day-section .bottom-right .charging-pulse-effect {
   position: absolute;
   margin: auto;
@@ -378,6 +390,7 @@ body {
 #login-section {
   position: absolute;
   top: 0;
+  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,7 +428,6 @@ body {
 }
 .login-form-container #login-form .user-wrapper #user-img {
   border-radius: 50%;
-  width: 60%;
   margin-bottom: 15px;
 }
 .login-form-container #login-form .user-wrapper #user-name {

@@ -36,7 +36,8 @@ Recreating the windows lockscreen / login look at functionality.
 - [Toggle Visibility When Hiding Elements](https://css-tricks.com/snippets/css/toggle-visibility-when-hiding-elements/)
 - [Passing multiple variables to an event listener](https://stackoverflow.com/questions/49140978/passing-multiple-variables-to-an-event-listener)
 - [Transtion Timing Function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function), [Also from W3 Schools](https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp)
-
+- [Navigator.getBattery() - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery)
+- [Check battery status](https://bepractical.tech/how-to-check-battery-status-with-javascript-2-simple-steps/)
 
 ##Assests and API
 
