@@ -5,7 +5,7 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #2a3158;
+   background-color: #202020;
    font-family: "Poppins", sans-serif;
    height: 100vh;
    max-width: 100%;
@@ -25,9 +25,23 @@ body{
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   padding: 25px;
-   z-index: 2;
-   // display: none;
+
+   .pic-of-day-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: rgba(255, 255, 255, 0.40);
+      width: 100%;
+      height: 100vh;
+      // background-image: url("../img/bg-1.jpg");
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+   }
+
 //Base Positioning for left, right divs
    .top-left-link,
    .top-right-link {
@@ -332,18 +346,17 @@ body{
 ###############################################################*/
 #login-section {
    position: absolute;
-   top: 0;
    top: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: rgba(223, 61, 61, 0.519);
+   // background-color: rgba(223, 61, 61, 0.519);
    width: 100%;
    height: 100vh;
    padding: 25px;
    background-color: rgba(14, 14, 14, 50%);
    opacity: 1;
-   transition: all 0.1s ease-in;
+   transition: all 0.2s ease-in;
    z-index: 10;
    // display: none;
 }
@@ -353,7 +366,7 @@ body{
    justify-content: center;
    align-items: center;
    // background-color: rgba(51, 51, 51, 0.5);
-   border-radius: 2px;
+   // border-radius: 2px;
    width: 250px;
    height: auto;
 
@@ -410,13 +423,13 @@ body{
          }
          .view-icon-span {
             position: absolute;
-            top: 2px;
-            left: 185px;
+            top: 1.7px;
+            left: 184.2px;
             display: flex;
             justify-content: center;
             align-items: center;
             /* background-color: yellow; */
-            height: 31px;
+            height: 31.5px;
             cursor: pointer;
 
             img {
@@ -435,9 +448,9 @@ body{
             justify-content: center;
             align-items: center;
             position: absolute;
-            top: 2px;
+            top: 1.7px;
             left: 216.5px;
-            height: 31px;
+            height: 31.5px;
             background-color: #b4b4b4;
             border: none;
             cursor: pointer;
@@ -489,7 +502,7 @@ body{
                display: flex;
                justify-content: space-between;
                align-items: center;
-               gap: 5px;
+               gap: 8px;
                width: fit-content;
                // visibility: hidden;
                transform: scale(0);

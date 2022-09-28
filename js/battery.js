@@ -16,20 +16,22 @@ navigator.getBattery().then(function (battery) {
    console.error(e);
 })
 
-window.onload = function () {
+document.onload = function () {
    function updateBatteryStatus(battery) {
       //   document.querySelector('#charging').textContent = battery.charging ? 'charging' : 'not charging';
+
       let percent = (battery.level * 100) + "%";
       root.style.setProperty("--percent-text", `"${percent}"`);
+
       //   document.querySelector('#level').textContent = battery.level * 100;
       //   document.querySelector('#dischargingTime').textContent = battery.dischargingTime / 60;
       
-      console.log(percent);
+      // console.log(percent);
 
       battery.addEventListener('chargingchange', () => {
-         batteryIsCharging = false;
+         // batteryIsCharging = false;
          console.log(battery);
-         console.log(batteryIsCharging);
+         // console.log(batteryIsCharging);
          if (battery.charging === true) {
             powerIcon.innerHTML = 
             `<img class="power-icon-img icon" src="img/icons/icons8-recharge-battery-32-white.png" alt="charging icon" />`;
@@ -66,6 +68,7 @@ window.onload = function () {
       // };
 
       battery.onlevelchange = function () {
+         
          let percent = (battery.level * 100) + "%";
          console.log(percent); 
          if(this.level === "100%") {
@@ -76,7 +79,7 @@ window.onload = function () {
          } else if (percent >= "90%") {
             powerIcon.innerHTML = 
             `<img class="power-icon-img icon" src="img/icons/icons8-charged-battery-32-white.png" alt="battery icon"/>`;
-            root.style.setProperty("--percent-text", `"${percent}" + "Charge Soon!`);
+            root.style.setProperty("--percent-text", `"${percent} help"`);
          } else if (percent >= "50%") {
             powerIcon.innerHTML = 
             `<img class="power-icon-img icon" src="img/icons/icons8-battery-level-32-white.png" alt="battery icon"/>`;
@@ -89,7 +92,7 @@ window.onload = function () {
             `<img class="power-icon-img icon" src="img/icons/icons8-empty-battery-32-white.png" alt="battery icon"/>`;
             root.style.setProperty("--percent-text", `"${percent}" + " Charge Soon!`);
          }
-         updateBatteryStatus(battery);
+         // updateBatteryStatus(battery);
       };
 
       // battery.ondischargingtimechange = function () {

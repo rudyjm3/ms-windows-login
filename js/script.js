@@ -13,8 +13,8 @@
 //    console.log(err);
 // })
 
-fetch('https://randomuser.me/api/?format=json&nat=us,br&inc=name,email,picture')
 //returning name, picture, and email only for US or British
+fetch('https://randomuser.me/api/?format=json&nat=us,br&inc=name,email,picture')
 // .then(response => response.json())
 // .then(userdata => console.log(userdata))
 // .catch(err => console.log(err));
@@ -41,6 +41,27 @@ function getRandomUser(userData) {
    console.log(userEmail);
 
 }
+
+
+/* ## Bring login section into view ##################################
+####################################################################*/
+
+let picOfDayCont = document.querySelector('.pic-of-day-container');
+let loginSection = document.querySelector('#login-section');
+let podSection = document.getElementById('pic-of-day-section');
+
+picOfDayCont.addEventListener('dblclick', () => {
+   loginPage();
+});
+
+function loginPage() {
+   // Move pic of day container out of view
+   picOfDayCont.style.cssText = "opacity: 0; top: -100%;";
+   //apply overlay filter class to pic of day section
+   podSection.classList.add('pic-of-day-filter');
+   // Move login section into view
+   loginSection.style.cssText = "top:0; opacity:1;";
+};
 
 //### Generate random pin number 
 const randomPin = Math.floor(1000 + Math.random() * 9000);
