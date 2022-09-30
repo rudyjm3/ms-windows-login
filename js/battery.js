@@ -16,7 +16,7 @@ navigator.getBattery().then(function (battery) {
    console.error(e);
 })
 
-document.onload = function () {
+function batteryStatus() {
    function updateBatteryStatus(battery) {
       //   document.querySelector('#charging').textContent = battery.charging ? 'charging' : 'not charging';
 
@@ -79,7 +79,7 @@ document.onload = function () {
          } else if (percent >= "90%") {
             powerIcon.innerHTML = 
             `<img class="power-icon-img icon" src="img/icons/icons8-charged-battery-32-white.png" alt="battery icon"/>`;
-            root.style.setProperty("--percent-text", `"${percent} help"`);
+            root.style.setProperty("--percent-text", `"${percent} 90 or higher"`);
          } else if (percent >= "50%") {
             powerIcon.innerHTML = 
             `<img class="power-icon-img icon" src="img/icons/icons8-battery-level-32-white.png" alt="battery icon"/>`;

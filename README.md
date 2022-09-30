@@ -38,6 +38,7 @@ Recreating the windows lockscreen / login look at functionality.
 - [Transtion Timing Function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function), [Also from W3 Schools](https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp)
 - [Navigator.getBattery() - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery)
 - [Check battery status](https://bepractical.tech/how-to-check-battery-status-with-javascript-2-simple-steps/)
+- [How to write :hover condition for a:before and a:after in CSS?](https://www.geeksforgeeks.org/how-to-write-hover-condition-for-abefore-and-aafter-in-css/)
 
 ##Assests and API
 
