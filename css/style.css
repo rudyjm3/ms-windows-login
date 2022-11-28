@@ -591,8 +591,15 @@ body {
 .login-form-container #login-form .options-main-container .show-opt-btns {
   transform: scale(1);
 }
-.login-form-container .login-bottom-right-icons-container {
-  position: relative;
-  left: 37%;
-  top: 48%;
+
+.login-bottom-right-icons-container {
+  position: absolute;
+  left: 92.1%;
+  top: 91.45%;
+}
+.login-bottom-right-icons-container .login-bottom-right__wifi-icon {
+  margin-right: 14.5px;
+}
+.login-bottom-right-icons-container .login-bottom-right__wifi-icon .wifi-icon-img {
+  rotate: -45deg;
 }/*# sourceMappingURL=style.css.map */
