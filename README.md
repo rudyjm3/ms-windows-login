@@ -1,7 +1,7 @@
 # Windows 10 Login Screen Recreation
 
 ### Screenshot
-![Screen cap](img/ScreenCap_ms-windows-login.png)
+![Screen cap](img/window-login_screencapture_2022-11-28-10_43_33.png)
 
 [Link to live project](https://rudyjm3.github.io/ms-windows-login/)
 ## Over View
